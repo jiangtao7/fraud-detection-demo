@@ -1,33 +1,24 @@
-### Fraud Detection Demo with Apache Flink
+## A Sample Project (fraud detection) for studying Kafka and Flink 
 
-#### Requirements:
-Demo is bundled in a self-contained package. In order to build it from sources you will need:
+### My Goals
 
- - git
- - docker
- - docker-compose
+**The sample code I copied/modified based on [afedulov/fraud-detection-demo](https://github.com/afedulov/fraud-detection-demo).** 
 
- Recommended resources allocated to Docker:
+ - run/debug with intellij idea.
+ - understand pros and cons between flink streaming and (spark streaming & kafka streaming).
+ - help me to understand flink infrastructure and design idea.
 
- - 4 CPUs
- - 8GB RAM
+### How to Run/Debug with Intellij Idea
 
- You can checkout the repository and run the demo locally.
+As described in `My Goals`, it's critical to have a local runnable environment to reach my goals.
 
-#### How to run:
+1. git clone 
+2. docker run ...
+3. open project with intellij idea
+4. switch to `.run`, and open 3 pre-saved debug/run configurations.
+5. start job/app/ui with debug/run tool.
 
-In order to run the demo locally, execute the following commands which build the project from sources and start all required services, including the Apache Flink and Apache Kafka clusters.
+**NOTE**, After following step #3, the run/debug configuration will look like this:
 
-```bash
-git clone https://github.com/afedulov/fraud-detection-demo
-docker build -t demo-fraud-webapp:latest -f webapp/webapp.Dockerfile webapp/
-docker build -t flink-job-fraud-demo:latest -f flink-job/Dockerfile flink-job/
-docker-compose -f docker-compose-local-job.yaml up
-```
-
-__Note__: Dependencies are stored in a cached Docker layer. If you later only modify the source code, not the dependencies, you can expect significantly shorter packaging times for the subsequent builds.
-
-When all components are up and running, go to `localhost:5656` in your browser.
-
-__Note__: you might need to change exposed ports in _docker-compose-local-job.yaml_ in case of collisions.
+![Run/Debug Configurations](docs/sample-run&debug.png)
 
