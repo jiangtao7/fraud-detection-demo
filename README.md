@@ -12,9 +12,11 @@
 
 As described in `My Goals`, it's critical to have a local runnable environment to reach my goals.
 
-1. git clone 
-2. docker run ...
-3. open project with intellij idea
+1. git clone git@github.com:suwkong/fraud-detection-demo.git. 
+2. docker-compose run -f docker-compose.yaml.
+3. open project with intellij idea.
+   - add jdk 11.
+   - run `npm install` under `webapp/` to install ui dependencies.
 4. switch to `.run`, and open 3 pre-saved debug/run configurations.
 5. start job/app/ui with debug/run tool.
 

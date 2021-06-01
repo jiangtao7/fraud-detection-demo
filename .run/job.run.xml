@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="job" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.ververica.field.dynamicrules.Main" />
-    <module name="dynamic-fraud-detection-demo.main" />
+    <module name="fraud-detection-demo" />
     <option name="PROGRAM_PARAMETERS" value="--local true --rules-source kafka --alerts-sink kafka --info" />
     <extension name="coverage">
       <pattern>
